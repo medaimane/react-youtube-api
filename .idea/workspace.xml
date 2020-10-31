@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/dependencies/Dependencies.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/localization/BaseLocalization.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presenter/Presenter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presenter/Presenters.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presenter/usePresenter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/ViewState.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api/APIError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api/models/Video.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/networking/NetworkingService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/networking/NetworkingServiceConfiguration.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/networking/NetworkingServiceImpl.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/networking/buildEndpointURL.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jeJhmFhQSVqLJuAi4ASsVo33J1" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -7,7 +46,45 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/screens/VideoPlayer" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="" />
+      <created>1604158746491</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604158746491</updated>
+      <workItem from="1604158747861" duration="6905000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1604160780070">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604160780070" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1604160441131">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604160441131" />
   </component>
 </project>
