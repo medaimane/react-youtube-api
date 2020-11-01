@@ -20,21 +20,25 @@ interface Props {
 export const VideoPlayerScreen: FC<Props> = props => {
     const {videoPlayerPresenter} = presenters;
     const state = usePresenter<VideoPlayerOutput>(videoPlayerPresenter);
-    const { selectedVideo, buttonType, isPlaying, viewState } = state;
+    const { selectedVideo, buttonType, isPlaying, viewState, searchString } = state;
 
     useEffect(() => {
-        videoPlayerPresenter.searchVideos();
+        videoPlayerPresenter.searchVideos('');
     }, [videoPlayerPresenter])
 
     const handleButtonClick = () => {
         videoPlayerPresenter.onPlayOrPauseClick();
     }
 
+    const handleOnSearch = (str: string) => {
+        videoPlayerPresenter.searchVideos(str);
+    }
+
     const isLoading = () => viewState === ViewState.Loading;
 
     return (
         <div className={props.className}>
-            <SearchAppBar title={local.appTitle} />
+            <SearchAppBar title={local.appTitle} onSearch={handleOnSearch} search={searchString} />
             <AppContent>
                 <AppGrid>
                     {isLoading()

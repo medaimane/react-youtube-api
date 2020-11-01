@@ -3,9 +3,11 @@ import {VideosService} from "../../services/api/VideoPlayerService/VideosService
 import {NullVideo, Video} from "../../services/api/models/Video";
 import {ViewState} from "./ViewState";
 import {ButtonIconType} from "../../components/Buttons/ButtonWithIcon";
+import {debounceTime} from "rxjs/operators";
 
 export interface VideoPlayerOutput {
     selectedVideo: Video;
+    searchString: string;
     isPlaying: boolean;
     viewState: ViewState;
     buttonType: ButtonIconType;
@@ -13,12 +15,14 @@ export interface VideoPlayerOutput {
 
 const VideoPlayerInitialOutput: VideoPlayerOutput = {
     selectedVideo: NullVideo,
+    searchString: '',
     isPlaying: false,
     viewState: ViewState.Loading,
     buttonType: ButtonIconType.PlayIcon,
 }
 
 export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
+    private searchString: string;
     private buttonType: ButtonIconType;
     private viewState: ViewState;
     private selectedVideo: Video;
@@ -28,6 +32,7 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
         super();
 
         this.isPlaying = false;
+        this.searchString = '';
         this.selectedVideo = NullVideo;
         this.buttonType = ButtonIconType.PlayIcon;
         this.viewState = ViewState.Loading;
@@ -44,8 +49,10 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
         this.updateOutput();
     }
 
-    searchVideos = () => {
-        this.videosService.getVideo().subscribe(this.getVideoSuccess, this.processError);
+    searchVideos = (searchString: string) => {
+        this.searchString = searchString;
+
+        this.videosService.searchVideo(searchString).subscribe(this.getVideoSuccess, this.processError);
 
         this.updateOutput();
     }
@@ -57,6 +64,7 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
 
     private processError = () => {
         this.viewState = ViewState.Error;
+        this.selectedVideo = NullVideo;
     }
 
     private toggleButtonIconType = () => {
@@ -66,6 +74,7 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
 
     private updateOutput = () => {
         this.update({
+            searchString: this.searchString,
             buttonType: this.buttonType,
             selectedVideo: this.selectedVideo,
             isPlaying: this.isPlaying,

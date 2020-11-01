@@ -10,6 +10,8 @@ import {Container} from "@material-ui/core";
 
 interface Props {
     title: string;
+    search: string;
+    onSearch: (str: string) => void;
 }
 
 export const SearchAppBar: FC<Props> = props => {
@@ -21,7 +23,7 @@ export const SearchAppBar: FC<Props> = props => {
                 <Container maxWidth="md">
                     <Toolbar>
                         <MenuButton className={classes.menuButton} />
-                        <SearchInput placeholder={local.searchPlaceholder} />
+                        <SearchInput placeholder={local.searchPlaceholder} value={props.search} onSearch={props.onSearch} />
                         <div className={classes.grow} />
                         <AppTitle title={props.title} className={classes.title} />
                     </Toolbar>

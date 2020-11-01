@@ -3,5 +3,5 @@ export function buildEndpointURL(
     endpoint: string,
     params?: string,
 ): string {
-    return baseURL + 'api/' + endpoint + (params || '');
+    return baseURL + 'youtube/' + endpoint + (params || '');
 }

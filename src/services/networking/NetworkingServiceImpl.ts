@@ -7,6 +7,8 @@ import {buildEndpointURL} from "./buildEndpointURL";
 import {catchError, map} from "rxjs/operators";
 import {makeError} from "../api/APIError";
 
+const GoogleApisBaseUrl = 'https://www.googleapis.com/';
+
 enum AjaxMethod {
     GET = 'GET',
     //POST = 'POST',
@@ -20,7 +22,9 @@ export class NetworkingServiceImpl implements NetworkingService {
         private readonly ajaxCreationMethod: AjaxCreationMethod,
         private readonly configuration: NetworkingServiceConfiguration,
         private readonly timeout: number = NetworkingServiceImpl.TIMEOUT_IN_MS,
-    ) {}
+    ) {
+        this.configuration.baseURL = GoogleApisBaseUrl;
+    }
 
     get(endpoint: string, headers?: Headers): Observable<AjaxResponse> {
         const request = this.getRequest(endpoint, headers);
