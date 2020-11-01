@@ -2,25 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dependencies/Dependencies.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/localization/BaseLocalization.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/Presenter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/Presenters.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/usePresenter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/ViewState.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api/APIError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api/models/Video.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/networking/NetworkingService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/networking/NetworkingServiceConfiguration.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/networking/NetworkingServiceImpl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/networking/buildEndpointURL.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__tests__/stubs/videoStub.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppBar/SearchAppBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppBar/SearchAppBarStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppContent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppGrid/AppGrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppGrid/AppGridStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppTitle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/ButtonWithIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/MenuButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProgressIndicator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchInput/SearchInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchInput/SearchInputStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoLoading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayerStyles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/localization/local.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/localization/BaseLocalization.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/Presenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/Presenter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/Presenters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/Presenters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/usePresenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/usePresenter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api/models/Video.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/models/Video.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +41,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -48,7 +60,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/react-youtube/dist/index.js" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,7 +73,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/screens/VideoPlayer" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components/VideoPlayer" />
+      <recent name="$PROJECT_DIR$/src/components/AppGrid" />
+      <recent name="$PROJECT_DIR$/src/components/SearchInput" />
+      <recent name="$PROJECT_DIR$/src/components/AppBar" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -70,7 +88,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604158746491</updated>
-      <workItem from="1604158747861" duration="6905000" />
+      <workItem from="1604158747861" duration="14783000" />
+      <workItem from="1604185053272" duration="14675000" />
     </task>
     <servers />
   </component>
@@ -78,13 +97,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604188573771">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1604188573771" />
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1604160780070">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604160780070" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1604160441131">
+    <state width="600" height="428" key="javadoc.popup" timestamp="1604179121977">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604179121977" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1604177214793">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604177214793" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604160441131" />
   </component>
 </project>

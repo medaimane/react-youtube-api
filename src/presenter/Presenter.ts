@@ -1,9 +1,11 @@
+type UpdateHandler<Output> = (output: Output) => void;
+
 export abstract class Presenter<Output> {
-    private updateHandler?: (output: Output) => void;
+    private updateHandler?: UpdateHandler<Output>;
 
     abstract getInitialOutput(): Output;
 
-    setUpdateHandler(updateHandler: (output: Output) => void): void {
+    setUpdateHandler(updateHandler: UpdateHandler<Output>): void {
         this.updateHandler = updateHandler;
     }
 

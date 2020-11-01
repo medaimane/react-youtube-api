@@ -1,60 +1,74 @@
 import {Presenter} from "../../presenter/Presenter";
 import {VideosService} from "../../services/api/VideoPlayerService/VideosService";
-import {Video} from "../../services/api/models/Video";
+import {NullVideo, Video} from "../../services/api/models/Video";
 import {ViewState} from "./ViewState";
+import {ButtonIconType} from "../../components/Buttons/ButtonWithIcon";
 
-interface VideoPlayerOutput {
-    videos: Video[];
+export interface VideoPlayerOutput {
+    selectedVideo: Video;
+    isPlaying: boolean;
     viewState: ViewState;
-    helloWorld: string;
+    buttonType: ButtonIconType;
 }
 
-const videoPlayerInitialOutput: VideoPlayerOutput = {
-    videos: [],
+const VideoPlayerInitialOutput: VideoPlayerOutput = {
+    selectedVideo: NullVideo,
+    isPlaying: false,
     viewState: ViewState.Loading,
-    helloWorld: '',
+    buttonType: ButtonIconType.PlayIcon,
 }
 
 export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
-    private helloWorld: string = '';
-    private videos: Video[] = [];
-    private viewState: ViewState = ViewState.Loading;
+    private buttonType: ButtonIconType;
+    private viewState: ViewState;
+    private selectedVideo: Video;
+    private isPlaying: boolean;
 
     constructor(private readonly videosService: VideosService) {
         super();
+
+        this.isPlaying = false;
+        this.selectedVideo = NullVideo;
+        this.buttonType = ButtonIconType.PlayIcon;
+        this.viewState = ViewState.Loading;
     }
 
     getInitialOutput = (): VideoPlayerOutput => {
-        return videoPlayerInitialOutput;
+        return {...VideoPlayerInitialOutput};
     }
 
-    start = () => {
-        this.getHelloWorld();
-    }
-
-    searchVideos = () => {
-
-    }
-
-    getHelloWorld = () => {
-        this.videosService.getHelloWorld().subscribe(this.getHelloSuccess, this.getHelloError);
+    onPlayOrPauseClick = () => {
+        this.isPlaying = !this.isPlaying;
+        this.toggleButtonIconType();
 
         this.updateOutput();
     }
 
-    private getHelloSuccess = (hello: string) => {
-        this.helloWorld = hello;
+    searchVideos = () => {
+        this.videosService.getVideo().subscribe(this.getVideoSuccess, this.processError);
+
+        this.updateOutput();
+    }
+
+    private getVideoSuccess = (video: Video) => {
         this.viewState = ViewState.Data;
+        this.selectedVideo = video;
     };
 
-    private getHelloError = () => {
+    private processError = () => {
         this.viewState = ViewState.Error;
+    }
+
+    private toggleButtonIconType = () => {
+        const isPlay = this.buttonType === ButtonIconType.PlayIcon;
+        this.buttonType = isPlay ? ButtonIconType.PauseIcon : ButtonIconType.PlayIcon;
     }
 
     private updateOutput = () => {
         this.update({
-            helloWorld: this.helloWorld,
-            videos: this.videos,
+            buttonType: this.buttonType,
+            selectedVideo: this.selectedVideo,
+            isPlaying: this.isPlaying,
             viewState: this.viewState,
         })
     }

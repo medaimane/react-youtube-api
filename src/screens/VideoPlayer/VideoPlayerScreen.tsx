@@ -1,37 +1,66 @@
 import React, {FC, useEffect} from "react";
 import {presenters} from "../../presenter/Presenters";
 import {usePresenter} from "../../presenter/usePresenter";
+import {SearchAppBar} from "../../components/AppBar/SearchAppBar";
+import {local} from "../../localization/local";
+import {VideoPlayer} from "../../components/VideoPlayer/VideoPlayer";
+import {AppContent} from "../../components/AppContent";
+import {ButtonWithIcon} from "../../components/Buttons/ButtonWithIcon";
+import {VideoPlayerOutput} from "./VideoPlayerPresenter";
+import Typography from "@material-ui/core/Typography";
+import {AppGrid} from "../../components/AppGrid/AppGrid";
+import Divider from '@material-ui/core/Divider';
 import {ViewState} from "./ViewState";
+import {VideoLoading} from "../../components/VideoPlayer/VideoLoading";
 
-export const VideoPlayerScreen: FC = () => (
-    <div>
-        <HelloWorld />
-    </div>
-);
+interface Props {
+    className?: string;
+}
 
-const HelloWorld = () => {
-    presenters.setupVideoPlayerPresenter();
-    const videoPresenter = presenters.getVideoPlayerPresenter();
-    const state = usePresenter(videoPresenter);
+export const VideoPlayerScreen: FC<Props> = props => {
+    const {videoPlayerPresenter} = presenters;
+    const state = usePresenter<VideoPlayerOutput>(videoPlayerPresenter);
+    const { selectedVideo, buttonType, isPlaying, viewState } = state;
 
     useEffect(() => {
-        videoPresenter.start();
-    })
+        videoPlayerPresenter.searchVideos();
+    }, [videoPlayerPresenter])
 
-    let view;
-    switch (state.viewState) {
-        case ViewState.Error:
-            view = (<p>{'Error'}</p>);
-            break;
-        case ViewState.Loading:
-            view = (<p>{'Loading'}</p>);
-            break;
-        case ViewState.Empty:
-            view = (<p>{'Empty'}</p>);
-            break;
-        case ViewState.Data:
-            view = (<p>{state.helloWorld}</p>);
+    const handleButtonClick = () => {
+        videoPlayerPresenter.onPlayOrPauseClick();
     }
 
-    return view;
+    const isLoading = () => viewState === ViewState.Loading;
+
+    return (
+        <div className={props.className}>
+            <SearchAppBar title={local.appTitle} />
+            <AppContent>
+                <AppGrid>
+                    {isLoading()
+                        ? <VideoLoading />
+                        : <VideoPlayer id={selectedVideo.id} isPlaying={isPlaying} />
+                    }
+                </AppGrid>
+                <Divider />
+                <AppGrid>
+                    <ButtonWithIcon
+                        disabled={viewState !== ViewState.Data}
+                        buttonType={buttonType}
+                        onClick={handleButtonClick}
+                    />
+                </AppGrid>
+                <Divider />
+                <AppGrid>
+                    <Typography variant={'h6'} component={'h4'}>{selectedVideo.title}</Typography>
+                </AppGrid>
+                <AppGrid>
+                    <Typography variant={'body1'} paragraph={true}>{selectedVideo.description}</Typography>
+                </AppGrid>
+                <AppGrid>
+                    <Typography variant={'subtitle1'} component={'h4'}>{selectedVideo.channel.name}</Typography>
+                </AppGrid>
+            </AppContent>
+        </div>
+    );
 };
