@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/api/models/VideosListJSON.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/VideoMetaData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/networking/baseURLs.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/stubs/videoStub.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/stubs/videoStub.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppBar/SearchAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar/SearchAppBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchInput/SearchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchInput/SearchInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/localization/local.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/local.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoLoading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoLoading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayerStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayerStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api/APIError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/APIError.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/networking/NetworkingServiceConfiguration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/networking/NetworkingServiceConfiguration.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/networking/NetworkingServiceImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/networking/NetworkingServiceImpl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/networking/buildEndpointURL.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/networking/buildEndpointURL.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604158746491</updated>
       <workItem from="1604158747861" duration="14783000" />
-      <workItem from="1604185053272" duration="19032000" />
+      <workItem from="1604185053272" duration="21538000" />
     </task>
     <servers />
   </component>

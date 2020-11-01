@@ -10,23 +10,21 @@ export class VideosServiceImpl implements VideosService {
     constructor(private readonly networkingService: NetworkingService) {
     }
 
-    searchVideo = (query: string): Observable<Video> => {
+    searchVideos = (query: string): Observable<Video[]> => {
         const endpoint = `v3/search?key=${YOUTUBE_KEY}&type=video&part=snippet&maxResults=1&q=${query}`;
         return this.networkingService.getJSON<VideosSearchDataJSON>(endpoint).pipe(
-            map(this.mapFirstVideoDataToVideo),
+            map(this.mapVideosDataToVideos),
         );
     }
 
-    private mapFirstVideoDataToVideo = (videosJSON: VideosSearchDataJSON): Video => {
-        const videoData = videosJSON.items[0];
-        const { id : { videoId }, snippet } = videoData;
-        return {
+    private mapVideosDataToVideos = (videosJSON: VideosSearchDataJSON): Video[] => {
+        return videosJSON.items.map(({ id : { videoId }, snippet }) => ({
             id: videoId,
             title: snippet.title,
             description: snippet.description,
             channel: {
                 name: snippet.channelTitle,
             },
-        };
+        }));
     };
 }

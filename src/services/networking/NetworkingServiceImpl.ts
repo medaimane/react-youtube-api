@@ -6,8 +6,7 @@ import {NetworkingServiceConfiguration} from "./NetworkingServiceConfiguration";
 import {buildEndpointURL} from "./buildEndpointURL";
 import {catchError, map} from "rxjs/operators";
 import {makeError} from "../api/APIError";
-
-const GoogleApisBaseUrl = 'https://www.googleapis.com/';
+import {GoogleApisBaseUrl} from "./baseURLs";
 
 enum AjaxMethod {
     GET = 'GET',
@@ -16,7 +15,7 @@ enum AjaxMethod {
 }
 
 export class NetworkingServiceImpl implements NetworkingService {
-    private static TIMEOUT_IN_MS: number = 30000;
+    public static TIMEOUT_IN_MS: number = 30000;
 
     constructor(
         private readonly ajaxCreationMethod: AjaxCreationMethod,
@@ -62,7 +61,7 @@ export class NetworkingServiceImpl implements NetworkingService {
     private sendRequest = (request: Observable<AjaxResponse>): Observable<AjaxResponse> => {
         return request.pipe(
             catchError(error => {
-                console.log(error);
+                console.log(`sendRequest`, error);
 
                 return throwError(makeError(error));
             }),

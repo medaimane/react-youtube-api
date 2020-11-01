@@ -13,9 +13,7 @@ export interface APIError<T extends Record<string, any> = Record<string, any>> {
     errorMessages: ErrorMessage<T>[];
 }
 
-export const makeError = (e: AjaxError): APIError => {
-    return {
-        status: e.status,
-        errorMessages: e.xhr.response && e.xhr.response.errorMessages,
-    };
-};
+export const makeError = (e: AjaxError): APIError => ({
+    status: e.status,
+    errorMessages: e.xhr?.response?.errorMessages,
+});

@@ -1,11 +1,12 @@
+import {debounceTime} from "rxjs/operators";
 import {Presenter} from "../../presenter/Presenter";
 import {VideosService} from "../../services/api/VideoPlayerService/VideosService";
 import {NullVideo, Video} from "../../services/api/models/Video";
 import {ViewState} from "./ViewState";
 import {ButtonIconType} from "../../components/Buttons/ButtonWithIcon";
-import {debounceTime} from "rxjs/operators";
 
 export interface VideoPlayerOutput {
+    videos: Video[];
     selectedVideo: Video;
     searchString: string;
     isPlaying: boolean;
@@ -14,6 +15,7 @@ export interface VideoPlayerOutput {
 }
 
 const VideoPlayerInitialOutput: VideoPlayerOutput = {
+    videos: [],
     selectedVideo: NullVideo,
     searchString: '',
     isPlaying: false,
@@ -22,25 +24,22 @@ const VideoPlayerInitialOutput: VideoPlayerOutput = {
 }
 
 export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
-    private searchString: string;
-    private buttonType: ButtonIconType;
-    private viewState: ViewState;
-    private selectedVideo: Video;
-    private isPlaying: boolean;
+    private searchString: string = '';
+    private buttonType: ButtonIconType = ButtonIconType.PlayIcon;
+    private viewState: ViewState = ViewState.Loading;
+    private videos: Video[] = [];
+    private selectedVideo: Video = NullVideo;
+    private isPlaying: boolean = false;
 
     constructor(private readonly videosService: VideosService) {
         super();
-
-        this.isPlaying = false;
-        this.searchString = '';
-        this.selectedVideo = NullVideo;
-        this.buttonType = ButtonIconType.PlayIcon;
-        this.viewState = ViewState.Loading;
     }
 
     getInitialOutput = (): VideoPlayerOutput => {
-        return {...VideoPlayerInitialOutput};
+        return VideoPlayerInitialOutput;
     }
+
+    start = () => {};
 
     onPlayOrPauseClick = () => {
         this.isPlaying = !this.isPlaying;
@@ -52,14 +51,20 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
     searchVideos = (searchString: string) => {
         this.searchString = searchString;
 
-        this.videosService.searchVideo(searchString).subscribe(this.getVideoSuccess, this.processError);
+        this.videosService
+            .searchVideos(searchString)
+            .pipe(debounceTime(1000))
+            .subscribe(this.getVideoSuccess, this.processError);
 
         this.updateOutput();
     }
 
-    private getVideoSuccess = (video: Video) => {
-        this.viewState = ViewState.Data;
-        this.selectedVideo = video;
+    private getVideoSuccess = (videos: Video[]) => {
+        const isEmpty = videos.length === 0;
+        this.viewState = isEmpty ? ViewState.Empty : ViewState.Data;
+
+        this.selectedVideo = videos[0];
+        this.videos = videos;
     };
 
     private processError = () => {
@@ -76,6 +81,7 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
         this.update({
             searchString: this.searchString,
             buttonType: this.buttonType,
+            videos: this.videos,
             selectedVideo: this.selectedVideo,
             isPlaying: this.isPlaying,
             viewState: this.viewState,
