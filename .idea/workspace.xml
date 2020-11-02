@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/VideoFooter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppSnackBar/AppAlert.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppSnackBar/AppSnackBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppSnackBar/AppSnackBarStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SackBar/SnackBarComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SackBar/SnackBarPresenter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoMetaData.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoLoading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoLoading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayerStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayerStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/localization/local.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/local.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/Presenters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/Presenters.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api/APIError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/APIError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/networking/NetworkingServiceConfiguration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/networking/NetworkingServiceConfiguration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/networking/baseURLs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/networking/baseURLs.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/networking/buildEndpointURL.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/networking/buildEndpointURL.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +54,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/AppSnackBar" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components/VideoPlayer" />
       <recent name="$PROJECT_DIR$/src/components/AppGrid" />
       <recent name="$PROJECT_DIR$/src/components/SearchInput" />
-      <recent name="$PROJECT_DIR$/src/components/AppBar" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -73,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604158746491</updated>
       <workItem from="1604158747861" duration="14783000" />
-      <workItem from="1604185053272" duration="24423000" />
+      <workItem from="1604185053272" duration="29252000" />
     </task>
     <servers />
   </component>
@@ -85,9 +82,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1604188573771" />
-    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1604160780070">
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1604277512403">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604277512403" />
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604160780070" />
     <state x="541" y="280" width="598" height="490" key="find.popup" timestamp="1604273284365">
       <screen x="0" y="0" width="1680" height="1050" />

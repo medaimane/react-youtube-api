@@ -15,13 +15,13 @@ interface Props {
 }
 
 export const VideoPlayerScreen: FC<Props> = props => {
-    const {videoPlayerPresenter} = presenters;
+    const {videoPlayerPresenter, snackBarPresenter} = presenters;
     const state = usePresenter<VideoPlayerOutput>(videoPlayerPresenter);
     const { selectedVideo, buttonType, isPlaying, viewState, searchString } = state;
 
     useEffect(() => {
-        videoPlayerPresenter.start();
-    }, [videoPlayerPresenter]);
+        videoPlayerPresenter.showSnackBar(snackBarPresenter.show);
+    }, [viewState, videoPlayerPresenter, snackBarPresenter]);
 
     const isLoading = () => viewState === ViewState.Loading;
 

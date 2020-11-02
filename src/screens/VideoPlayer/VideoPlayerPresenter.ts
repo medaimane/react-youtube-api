@@ -5,6 +5,10 @@ import {NullVideo, Video} from "../../services/api/models/Video";
 import {ViewState} from "./ViewState";
 import {ButtonIconType} from "../../components/Buttons/ButtonWithIcon";
 import {APIError, QuotaExceededErrorReason} from "../../services/api/APIError";
+import {AlertState} from "../../components/AppSnackBar/AppSnackBar";
+import {local} from "../../localization/local";
+
+type ShowSnackBarHandler = (message: string, state: AlertState) => void
 
 export interface VideoPlayerOutput {
     videos: Video[];
@@ -32,6 +36,8 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
     private selectedVideo: Video = NullVideo;
     private isPlaying: boolean = false;
 
+    private isQuotaExceededError: boolean = false;
+
     constructor(private readonly videosService: VideosService) {
         super();
     }
@@ -40,7 +46,11 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
         return VideoPlayerInitialOutput;
     }
 
-    start = () => {};
+    showSnackBar = (showSnackBarHandler: ShowSnackBarHandler) => {
+        this.showSnackBarAlertBasedOnViewState(showSnackBarHandler);
+
+        this.updateOutput();
+    };
 
     onPlayOrPauseClick = () => {
         this.isPlaying = !this.isPlaying;
@@ -79,8 +89,10 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
         const errorMessage = error?.errorMessages[0];
 
         if (errorMessage?.reason === QuotaExceededErrorReason) {
+            this.isQuotaExceededError = true;
             this.viewState = ViewState.Loading;
         } else {
+            this.isQuotaExceededError = false;
             this.viewState = ViewState.Error;
         }
     }
@@ -88,6 +100,32 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
     private toggleButtonIconType = () => {
         const isPlay = this.buttonType === ButtonIconType.PlayIcon;
         this.buttonType = isPlay ? ButtonIconType.PauseIcon : ButtonIconType.PlayIcon;
+    }
+
+    private showSnackBarAlertBasedOnViewState = (showSnackBarHandler: ShowSnackBarHandler) => {
+        let message = '';
+        let state = AlertState.Info;
+
+        switch (this.viewState) {
+            case ViewState.Data:
+                message = local.successMessage;
+                state = AlertState.Success;
+                break;
+            case ViewState.Empty:
+                message = local.emptyMessage;
+                state = AlertState.Info;
+                break;
+            case ViewState.Loading:
+                message = local.loadingMessage;
+                state = AlertState.Info;
+                break;
+            case ViewState.Error:
+                message = this.isQuotaExceededError ? local.youtubeAPIError : local.errorMessage;
+                state = AlertState.Error;
+                break;
+        }
+
+        showSnackBarHandler(message, state);
     }
 
     private updateOutput = () => {
