@@ -19,8 +19,8 @@ export const SearchAppBar: FC<Props> = props => {
 
     return (
         <div className={classes.grow}>
-            <AppBar position="static">
-                <Container maxWidth="md">
+            <AppBar position={'static'}>
+                <Container maxWidth={'md'}>
                     <Toolbar>
                         <MenuButton className={classes.menuButton} />
                         <SearchInput

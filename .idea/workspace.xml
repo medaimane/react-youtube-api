@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/VideosServiceImpl.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/VideosServiceImpl.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/testsStubs/videosStub.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/testsStubs/videosStub.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AppBar/SearchAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar/SearchAppBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppSnackBar/AppSnackBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppSnackBar/AppSnackBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppTitle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProgressIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProgressIndicator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoFooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoLoading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoLoading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/localization/local.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/local.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenter/usePresenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/usePresenter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/SackBar/SnackBarComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SackBar/SnackBarComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,12 +120,24 @@
       <option name="presentableId" value="Default" />
       <updated>1604158746491</updated>
       <workItem from="1604158747861" duration="14783000" />
-      <workItem from="1604185053272" duration="36348000" />
+      <workItem from="1604185053272" duration="36524000" />
+      <workItem from="1604310629059" duration="626000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604188573771">
@@ -132,26 +149,30 @@
     </state>
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604277512403" />
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604160780070" />
-    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604310122644">
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604311178763">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1604310122644" />
-    <state width="1659" height="295" key="GridCell.Tab.0.bottom" timestamp="1604283929679">
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1604311178763" />
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom" timestamp="1604310302693">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1604283929679" />
-    <state width="1659" height="295" key="GridCell.Tab.0.center" timestamp="1604283929677">
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1604310302693" />
+    <state width="1659" height="295" key="GridCell.Tab.0.center" timestamp="1604310302691">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1604283929677" />
-    <state width="1659" height="295" key="GridCell.Tab.0.left" timestamp="1604283929676">
+    <state width="1659" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1604310302691" />
+    <state width="1659" height="295" key="GridCell.Tab.0.left" timestamp="1604310302690">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1604283929676" />
-    <state width="1659" height="295" key="GridCell.Tab.0.right" timestamp="1604283929677">
+    <state width="1659" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1604310302690" />
+    <state width="1659" height="295" key="GridCell.Tab.0.right" timestamp="1604310302692">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1604283929677" />
+    <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1604310302692" />
+    <state x="691" y="441" key="VCS.ChangelistChooser" timestamp="1604311129941">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="691" y="441" key="VCS.ChangelistChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604311129941" />
     <state x="541" y="280" width="598" height="490" key="find.popup" timestamp="1604273284365">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
