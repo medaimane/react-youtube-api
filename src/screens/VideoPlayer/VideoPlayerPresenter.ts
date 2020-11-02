@@ -30,6 +30,8 @@ const VideoPlayerInitialOutput: VideoPlayerOutput = {
 
 // TODO: Add Unit test.
 export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
+    private showSnackBarHandler: ShowSnackBarHandler | null = null;
+
     private searchString: string = '';
     private buttonType: ButtonIconType = ButtonIconType.PlayIcon;
     private viewState: ViewState = ViewState.Empty;
@@ -48,7 +50,9 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
     }
 
     showSnackBar = (showSnackBarHandler: ShowSnackBarHandler) => {
-        this.showSnackBarAlertBasedOnViewState(showSnackBarHandler);
+        this.showSnackBarHandler = showSnackBarHandler;
+
+        this.showSnackBarAlertBasedOnViewState();
 
         this.updateOutput();
     };
@@ -79,11 +83,15 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
         this.selectedVideo = videos[0];
         this.videos = videos;
 
+        this.showSnackBarAlertBasedOnViewState()
+
         this.updateOutput();
     };
 
     private processError = (error: APIError) => {
         this.processErrorViewState(error)
+
+        this.showSnackBarAlertBasedOnViewState()
 
         this.selectedVideo = NullVideo;
         this.videos = [];
@@ -108,7 +116,7 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
         this.buttonType = isPlay ? ButtonIconType.PauseIcon : ButtonIconType.PlayIcon;
     }
 
-    private showSnackBarAlertBasedOnViewState = (showSnackBarHandler: ShowSnackBarHandler) => {
+    private showSnackBarAlertBasedOnViewState = () => {
         let message = '';
         let state = AlertState.Info;
 
@@ -122,16 +130,21 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
                 state = AlertState.Info;
                 break;
             case ViewState.Loading:
+                if (this.isQuotaExceededError) {
+                    message = local.youtubeAPIError;
+                    state = AlertState.Error;
+                    break;
+                }
                 message = local.loadingMessage;
                 state = AlertState.Info;
                 break;
             case ViewState.Error:
-                message = this.isQuotaExceededError ? local.youtubeAPIError : local.errorMessage;
+                message = local.errorMessage;
                 state = AlertState.Error;
                 break;
         }
 
-        showSnackBarHandler(message, state);
+        this.showSnackBarHandler?.(message, state);
     }
 
     private updateOutput = () => {
