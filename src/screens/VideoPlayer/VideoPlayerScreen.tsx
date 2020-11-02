@@ -13,6 +13,8 @@ import {VideoFooter} from "../../components/VideoFooter";
 interface Props {
     className?: string;
 }
+// TODO: Add list of videos:
+//  Show all retrieved videos of the search to give user choice to select another video.
 
 export const VideoPlayerScreen: FC<Props> = props => {
     const {videoPlayerPresenter, snackBarPresenter} = presenters;

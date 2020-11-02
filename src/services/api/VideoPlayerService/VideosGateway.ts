@@ -1,6 +1,6 @@
 import {Observable} from "rxjs";
 import {Video} from "../models/Video";
 
-export interface VideosService {
+export interface VideosGateway {
     searchVideos(query: string): Observable<Video[]>;
 }

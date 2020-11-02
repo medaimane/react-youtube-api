@@ -8,3 +8,6 @@ export class DevNetworkingServiceConfiguration implements NetworkingServiceConfi
     baseURL?: string;
 }
 
+// TODO: Add production configuration
+// class ProductionNetworkingServiceConfiguration
+

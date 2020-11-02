@@ -13,6 +13,7 @@ export const SnackBarInitialOutput: SnackBarOutput = {
     message: '',
 }
 
+// TODO: Unit test.
 export class SnackBarPresenter extends Presenter<SnackBarOutput> {
     private isOpen: boolean = false;
     private message: string = '';

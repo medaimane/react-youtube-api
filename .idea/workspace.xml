@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AppSnackBar/AppAlert.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AppSnackBar/AppSnackBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AppSnackBar/AppSnackBarStyles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/SackBar/SnackBarComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/SackBar/SnackBarPresenter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/localization/local.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/local.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenter/Presenters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/Presenters.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +38,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -54,12 +46,47 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/__tests__" />
       <recent name="$PROJECT_DIR$/src/components/AppSnackBar" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components/VideoPlayer" />
       <recent name="$PROJECT_DIR$/src/components/AppGrid" />
-      <recent name="$PROJECT_DIR$/src/components/SearchInput" />
     </key>
+  </component>
+  <component name="RunManager" selected="Jest.VideosServiceImpl">
+    <configuration name="VideosServiceImpl" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/VideosServiceImpl.test.ts" />
+      <test-names>
+        <test-name value="VideosServiceImpl" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="VideosServiceImpl.getVideos" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/VideosServiceImpl.test.ts" />
+      <test-names>
+        <test-name value="VideosServiceImpl" />
+        <test-name value="getVideos" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.VideosServiceImpl" />
+        <item itemvalue="Jest.VideosServiceImpl.getVideos" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604158746491</updated>
       <workItem from="1604158747861" duration="14783000" />
-      <workItem from="1604185053272" duration="29252000" />
+      <workItem from="1604185053272" duration="32823000" />
     </task>
     <servers />
   </component>
@@ -87,6 +114,22 @@
     </state>
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604277512403" />
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604160780070" />
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom" timestamp="1604283929679">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1604283929679" />
+    <state width="1659" height="295" key="GridCell.Tab.0.center" timestamp="1604283929677">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1604283929677" />
+    <state width="1659" height="295" key="GridCell.Tab.0.left" timestamp="1604283929676">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1604283929676" />
+    <state width="1659" height="295" key="GridCell.Tab.0.right" timestamp="1604283929677">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1604283929677" />
     <state x="541" y="280" width="598" height="490" key="find.popup" timestamp="1604273284365">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -95,10 +138,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604179121977" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1604202657152">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1604281556506">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604202657152" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604281556506" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604160441131" />
   </component>
 </project>

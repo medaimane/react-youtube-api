@@ -1,4 +1,4 @@
-import {VideosService} from "./VideosService";
+import {VideosGateway} from "./VideosGateway";
 import {NetworkingService} from "../../networking/NetworkingService";
 import {Observable} from "rxjs";
 import {Video} from "../models/Video";
@@ -6,7 +6,7 @@ import {YOUTUBE_KEY} from "../../networking/NetworkingServiceConfiguration";
 import {map} from "rxjs/operators";
 import {VideosSearchDataJSON} from "../models/VideosListJSON";
 
-export class VideosServiceImpl implements VideosService {
+export class VideosServiceImpl implements VideosGateway {
     constructor(private readonly networkingService: NetworkingService) {
     }
 

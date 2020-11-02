@@ -1,6 +1,6 @@
 import {debounceTime} from "rxjs/operators";
 import {Presenter} from "../../presenter/Presenter";
-import {VideosService} from "../../services/api/VideoPlayerService/VideosService";
+import {VideosGateway} from "../../services/api/VideoPlayerService/VideosGateway";
 import {NullVideo, Video} from "../../services/api/models/Video";
 import {ViewState} from "./ViewState";
 import {ButtonIconType} from "../../components/Buttons/ButtonWithIcon";
@@ -28,6 +28,7 @@ const VideoPlayerInitialOutput: VideoPlayerOutput = {
     buttonType: ButtonIconType.PlayIcon,
 }
 
+// TODO: Unit test.
 export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
     private searchString: string = '';
     private buttonType: ButtonIconType = ButtonIconType.PlayIcon;
@@ -38,7 +39,7 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
 
     private isQuotaExceededError: boolean = false;
 
-    constructor(private readonly videosService: VideosService) {
+    constructor(private readonly videosService: VideosGateway) {
         super();
     }
 

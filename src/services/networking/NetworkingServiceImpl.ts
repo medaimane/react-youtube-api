@@ -14,6 +14,7 @@ enum AjaxMethod {
     //PUT = 'PUT',
 }
 
+// TODO: Unit test.
 export class NetworkingServiceImpl implements NetworkingService {
     public static TIMEOUT_IN_MS: number = 30000;
 
