@@ -9,7 +9,7 @@ import {APIError} from "../services/api/APIError";
 
 jest.mock('process', () => ({
     env: {
-        REACT_APP_YOUTUBE_DATA_API_KEY: 'some youtube data key'
+        REACT_APP_YOUTUBE_DATA_API_KEY: 'SOME_YOUTUBE_API_KEY',
     }
 }));
 
@@ -35,7 +35,7 @@ describe('VideosServiceImpl', () => {
             sut.searchVideos(searchString);
 
             expect(networkingService.getJSON).toBeCalledWith(
-                `v3/search?key=${YOUTUBE_KEY}&type=video&part=snippet&maxResults=1&q=${searchString}`,
+                `v3/search?key=SOME_YOUTUBE_API_KEY&type=video&part=snippet&maxResults=1&q=${searchString}`,
             );
         })
 

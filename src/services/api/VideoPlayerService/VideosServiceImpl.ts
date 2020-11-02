@@ -4,15 +4,15 @@ import {Observable} from "rxjs";
 import {Video} from "../models/Video";
 import {map} from "rxjs/operators";
 import {VideosSearchDataJSON} from "../models/VideosListJSON";
+import {getYoutubeDataAPIKey} from "../../networking/NetworkingServiceConfiguration";
 
 export class VideosServiceImpl implements VideosGateway {
     constructor(private readonly networkingService: NetworkingService) {
     }
 
     searchVideos = (query: string): Observable<Video[]> => {
-        const YOUTUBE_KEY = process.env.REACT_APP_YOUTUBE_DATA_API_KEY ?? '';
-
-        const endpoint = `v3/search?key=${YOUTUBE_KEY}&type=video&part=snippet&maxResults=1&q=${query}`;
+        const youtubeKey = getYoutubeDataAPIKey();
+        const endpoint = `v3/search?key=${youtubeKey}&type=video&part=snippet&maxResults=1&q=${query}`;
         return this.networkingService.getJSON<VideosSearchDataJSON>(endpoint).pipe(
             map(this.mapVideosDataToVideos),
         );
