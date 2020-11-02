@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppBar/SearchAppBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar/SearchAppBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/VideosServiceImpl.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/VideosServiceImpl.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/VideoPlayerService/VideosServiceImpl.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,8 @@
       <updated>1604158746491</updated>
       <workItem from="1604158747861" duration="14783000" />
       <workItem from="1604185053272" duration="36524000" />
-      <workItem from="1604310629059" duration="626000" />
+      <workItem from="1604310629059" duration="693000" />
+      <workItem from="1604328503500" duration="661000" />
     </task>
     <servers />
   </component>
@@ -138,12 +136,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="173" key="#Plugins" timestamp="1604328750174">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="173" key="#Plugins/0.0.1680.1050@0.0.1680.1050" timestamp="1604328750174" />
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604188573771">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1604188573771" />
+    <state x="575" y="334" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604328702624">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="575" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604328702624" />
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1604277512403">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

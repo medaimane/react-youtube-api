@@ -1,12 +1,17 @@
 import {VideosServiceImpl} from "../services/api/VideoPlayerService/VideosServiceImpl";
 import {NetworkingServiceStub} from "./testsStubs/NetworkingServiceStub";
-import {YOUTUBE_KEY} from "../services/networking/NetworkingServiceConfiguration";
 import {VideosGateway} from "../services/api/VideoPlayerService/VideosGateway";
 import {of, throwError} from "rxjs";
 import {videoStub} from "./testsStubs/videosStub";
 import {Video} from "../services/api/models/Video";
 import {videosDataStub} from "./testsStubs/videosJSONStub";
 import {APIError} from "../services/api/APIError";
+
+jest.mock('process', () => ({
+    env: {
+        REACT_APP_YOUTUBE_DATA_API_KEY: 'some youtube data key'
+    }
+}));
 
 describe('VideosServiceImpl', () => {
     let sut: VideosGateway;
