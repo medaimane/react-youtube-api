@@ -9,9 +9,11 @@ import {videosDataStub} from "./testsStubs/videosJSONStub";
 import {APIError} from "../services/api/APIError";
 
 describe('VideosServiceImpl', () => {
+    let sut: VideosGateway;
     let networkingService: NetworkingServiceStub;
 
-    let sut: VideosGateway;
+    const next = jest.fn();
+    const error = jest.fn();
 
     beforeEach(() => {
         networkingService = new NetworkingServiceStub();
@@ -34,11 +36,7 @@ describe('VideosServiceImpl', () => {
 
         it('returns videos list', () => {
             const expectedVideos: Video[] = [videoStub];
-
             networkingService.getJSON.mockReturnValue(of(videosDataStub));
-
-            const next = jest.fn();
-            const error = jest.fn();
 
             sut.searchVideos(searchString).subscribe(next, error);
 
@@ -48,13 +46,8 @@ describe('VideosServiceImpl', () => {
 
         describe('when call failed', () => {
             it('throws exception in case of error', () => {
-                const apiError: APIError = {
-                    status: 404,
-                    errorMessages: [],
-                };
+                const apiError: APIError = { status: 404, errorMessages: [] };
                 networkingService.getJSON.mockReturnValue(throwError(apiError));
-                const next = jest.fn();
-                const error = jest.fn();
 
                 sut.searchVideos(searchString).subscribe(next, error);
 

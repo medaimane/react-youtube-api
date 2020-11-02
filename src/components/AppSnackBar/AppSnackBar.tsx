@@ -20,22 +20,7 @@ interface Props {
     onClosePress: () => void;
 }
 
-export const AppSnackBar: FC<Props> = props => {
-    const classes = useStyles();
-
-    return (
-        <div className={classes.root}>
-            <Snackbar open={props.isOpen} autoHideDuration={SnackBareTimeOut} onClose={props.onClosePress}>
-                <AppAlert
-                    severity={mapAlertStateToSeverity(props.state)}
-                    onClose={props.onClosePress}
-                >{props.message}</AppAlert>
-            </Snackbar>
-        </div>
-    );
-}
-
-function mapAlertStateToSeverity(state: string): Color {
+const mapAlertStateToColor = (state: string): Color => {
     switch (state) {
         case AlertState.Error:
             return 'error';
@@ -45,4 +30,19 @@ function mapAlertStateToSeverity(state: string): Color {
             return 'warning';
     }
     return 'success';
+};
+
+export const AppSnackBar: FC<Props> = props => {
+    const classes = useStyles();
+
+    return (
+        <div className={classes.root}>
+            <Snackbar open={props.isOpen} autoHideDuration={SnackBareTimeOut} onClose={props.onClosePress}>
+                <AppAlert
+                    severity={mapAlertStateToColor(props.state)}
+                    onClose={props.onClosePress}
+                >{props.message}</AppAlert>
+            </Snackbar>
+        </div>
+    );
 }

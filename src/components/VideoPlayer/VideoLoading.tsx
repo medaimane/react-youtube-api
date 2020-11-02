@@ -1,8 +1,8 @@
 import React, {FC} from "react";
 import Skeleton from "@material-ui/lab/Skeleton";
+import {videoSize} from "./VideoPlayer";
 
 import './VideoPlayerStyles.css';
-import {videoSize} from "./VideoPlayer";
 
 export const VideoLoading: FC = () => (
     <div className={'player-wrapper '}>

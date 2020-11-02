@@ -8,5 +8,5 @@ export const usePresenter = <T>(presenter: Presenter<T>) => {
 
     presenter.setUpdateHandler(setState);
 
-    return {...state};
+    return state;
 }

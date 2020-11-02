@@ -24,15 +24,15 @@ const VideoPlayerInitialOutput: VideoPlayerOutput = {
     selectedVideo: NullVideo,
     searchString: '',
     isPlaying: false,
-    viewState: ViewState.Loading,
+    viewState: ViewState.Empty,
     buttonType: ButtonIconType.PlayIcon,
 }
 
-// TODO: Unit test.
+// TODO: Add Unit test.
 export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
     private searchString: string = '';
     private buttonType: ButtonIconType = ButtonIconType.PlayIcon;
-    private viewState: ViewState = ViewState.Loading;
+    private viewState: ViewState = ViewState.Empty;
     private videos: Video[] = [];
     private selectedVideo: Video = NullVideo;
     private isPlaying: boolean = false;
@@ -61,14 +61,15 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
     }
 
     searchVideos = (searchString: string) => {
+        this.viewState = ViewState.Loading;
         this.searchString = searchString;
+
+        this.updateOutput();
 
         this.videosService
             .searchVideos(searchString)
             .pipe(debounceTime(1000))
             .subscribe(this.getVideoSuccess, this.processError);
-
-        this.updateOutput();
     }
 
     private getVideoSuccess = (videos: Video[]) => {
@@ -77,6 +78,8 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
 
         this.selectedVideo = videos[0];
         this.videos = videos;
+
+        this.updateOutput();
     };
 
     private processError = (error: APIError) => {
@@ -84,6 +87,8 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
 
         this.selectedVideo = NullVideo;
         this.videos = [];
+
+        this.updateOutput();
     }
 
     private processErrorViewState = (error: APIError) => {

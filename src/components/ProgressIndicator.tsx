@@ -18,7 +18,7 @@ export const ProgressIndicator: FC = () => {
 
     return (
         <div className={classes.root}>
-            <CircularProgress color="secondary" />
+            <CircularProgress color={'secondary'} />
         </div>
     );
 };

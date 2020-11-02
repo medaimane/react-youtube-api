@@ -24,9 +24,9 @@ export const VideoPlayer: FC<Props> = props => {
     }
 
     return (
-        <div className='player-wrapper'>
+        <div className={'player-wrapper'}>
             <Player
-                className='player'
+                className={'player'}
                 url={url}
                 playing={props.isPlaying}
                 controls={true}

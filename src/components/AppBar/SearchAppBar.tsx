@@ -23,7 +23,11 @@ export const SearchAppBar: FC<Props> = props => {
                 <Container maxWidth="md">
                     <Toolbar>
                         <MenuButton className={classes.menuButton} />
-                        <SearchInput placeholder={local.searchPlaceholder} value={props.search} onSearch={props.onSearch} />
+                        <SearchInput
+                            placeholder={local.searchPlaceholder}
+                            value={props.search}
+                            onSearch={props.onSearch}
+                        />
                         <div className={classes.grow} />
                         <AppTitle title={props.title} className={classes.title} />
                     </Toolbar>

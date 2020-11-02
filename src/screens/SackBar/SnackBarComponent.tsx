@@ -13,7 +13,7 @@ export const SnackBarComponent: FC = () => {
             isOpen={state.isOpen}
             state={state.alertState}
             message={state.message}
-            onClosePress={() => snackBarPresenter.hide()}
+            onClosePress={snackBarPresenter.hide}
         />
     );
 };

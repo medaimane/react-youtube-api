@@ -4,9 +4,11 @@ import {ButtonIconType, ButtonWithIcon} from "./Buttons/ButtonWithIcon";
 import Typography from "@material-ui/core/Typography";
 import {Video} from "../services/api/models/Video";
 import Skeleton from "@material-ui/lab/Skeleton";
+import {local} from "../localization/local";
 
 interface Props {
     isLoading: boolean;
+    isEmpty: boolean;
     isButtonDisabled: boolean;
     buttonType: ButtonIconType;
     onButtonClick: () => void;
@@ -18,7 +20,15 @@ export const VideoFooter: FC<Props> = props => {
         return props.isLoading ? <Skeleton animation={'wave'} /> : content;
     }
 
-    return (
+    if (props.isEmpty) {
+        return (
+            <AppGrid>
+                <Typography variant={'body1'} paragraph={true}>{local.searchForVideos}</Typography>
+            </AppGrid>
+        );
+    }
+
+    return  (
         <div>
             <AppGrid>
                 <ButtonWithIcon

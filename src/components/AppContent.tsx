@@ -18,7 +18,7 @@ export const AppContent: FC<Props> = props => {
     const classes = useStyles();
 
     return (
-        <Container maxWidth="lg">
+        <Container maxWidth={'lg'}>
             <div className={classes.root}>
                 {props.children}
             </div>

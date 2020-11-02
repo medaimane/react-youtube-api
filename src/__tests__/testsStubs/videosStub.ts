@@ -8,15 +8,3 @@ export const videoStub: Video = {
         name: 'Traversy Media',
     },
 };
-
-export const videosStub: Video[] = [
-    videoStub,
-    {
-        ...videoStub,
-        id: 'some id',
-    },
-    {
-        ...videoStub,
-        id: 'some other id',
-    }
-]

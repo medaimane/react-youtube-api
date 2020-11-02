@@ -26,6 +26,7 @@ export const VideoPlayerScreen: FC<Props> = props => {
     }, [viewState, videoPlayerPresenter, snackBarPresenter]);
 
     const isLoading = () => viewState === ViewState.Loading;
+    const isEmpty = () => viewState === ViewState.Empty;
 
     const handleButtonClick = () => {
         videoPlayerPresenter.onPlayOrPauseClick();
@@ -48,6 +49,7 @@ export const VideoPlayerScreen: FC<Props> = props => {
                 {videoPlayer()}
                 <VideoFooter
                     isLoading={isLoading()}
+                    isEmpty={isEmpty()}
                     selectedVideo={selectedVideo}
                     buttonType={buttonType}
                     isButtonDisabled={viewState !== ViewState.Data}

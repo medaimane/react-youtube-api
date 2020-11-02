@@ -3,6 +3,7 @@ export const local = {
     appTitle: 'YouTV',
     search: 'Search',
     searchPlaceholder: 'Search...',
+    searchForVideos: 'Welcome! You can search Youtube videos just from here!',
 
     // Button
     play: 'Play',
