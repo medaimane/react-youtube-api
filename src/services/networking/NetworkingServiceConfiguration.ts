@@ -1,4 +1,4 @@
-export const YOUTUBE_KEY = 'AIzaSyAsAMaOYlGzeJrwMrungI5_Ruv8rmITnAI';
+export const YOUTUBE_KEY = 'AIzaSyAW55ywqYRXIMsBEoiRYnbyHkeTyqpooFc';
 
 export interface NetworkingServiceConfiguration {
     baseURL?: string;

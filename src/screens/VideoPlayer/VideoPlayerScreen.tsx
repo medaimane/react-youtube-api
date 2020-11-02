@@ -6,10 +6,9 @@ import {local} from "../../localization/local";
 import {VideoPlayer} from "../../components/VideoPlayer/VideoPlayer";
 import {AppContent} from "../../components/AppContent";
 import {VideoPlayerOutput} from "./VideoPlayerPresenter";
-import Divider from '@material-ui/core/Divider';
 import {ViewState} from "./ViewState";
 import {VideoLoading} from "../../components/VideoPlayer/VideoLoading";
-import {VideoMetaData} from "../../components/VideoMetaData";
+import {VideoFooter} from "../../components/VideoFooter";
 
 interface Props {
     className?: string;
@@ -22,7 +21,9 @@ export const VideoPlayerScreen: FC<Props> = props => {
 
     useEffect(() => {
         videoPlayerPresenter.start();
-    }, [videoPlayerPresenter])
+    }, [videoPlayerPresenter]);
+
+    const isLoading = () => viewState === ViewState.Loading;
 
     const handleButtonClick = () => {
         videoPlayerPresenter.onPlayOrPauseClick();
@@ -32,21 +33,19 @@ export const VideoPlayerScreen: FC<Props> = props => {
         videoPlayerPresenter.searchVideos(str);
     }
 
-    const isLoading = () => viewState === ViewState.Loading;
-
-    const getVideoPlayer = () => {
-        if (isLoading()) {
-            return <VideoLoading />;
-        }
-        return <VideoPlayer id={selectedVideo.id} isPlaying={isPlaying} />;
+    const videoPlayer = () => {
+        return isLoading()
+            ? <VideoLoading />
+            : <VideoPlayer videoId={selectedVideo.id} isPlaying={isPlaying} />;
     };
 
     return (
         <div className={props.className}>
             <SearchAppBar title={local.appTitle} onSearch={handleOnSearch} search={searchString} />
             <AppContent>
-                {getVideoPlayer()}
-                <VideoMetaData
+                {videoPlayer()}
+                <VideoFooter
+                    isLoading={isLoading()}
                     selectedVideo={selectedVideo}
                     buttonType={buttonType}
                     isButtonDisabled={viewState !== ViewState.Data}

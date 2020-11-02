@@ -4,6 +4,7 @@ import {VideosService} from "../../services/api/VideoPlayerService/VideosService
 import {NullVideo, Video} from "../../services/api/models/Video";
 import {ViewState} from "./ViewState";
 import {ButtonIconType} from "../../components/Buttons/ButtonWithIcon";
+import {APIError, QuotaExceededErrorReason} from "../../services/api/APIError";
 
 export interface VideoPlayerOutput {
     videos: Video[];
@@ -67,9 +68,21 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
         this.videos = videos;
     };
 
-    private processError = () => {
-        this.viewState = ViewState.Error;
+    private processError = (error: APIError) => {
+        this.processErrorViewState(error)
+
         this.selectedVideo = NullVideo;
+        this.videos = [];
+    }
+
+    private processErrorViewState = (error: APIError) => {
+        const errorMessage = error?.errorMessages[0];
+
+        if (errorMessage?.reason === QuotaExceededErrorReason) {
+            this.viewState = ViewState.Loading;
+        } else {
+            this.viewState = ViewState.Error;
+        }
     }
 
     private toggleButtonIconType = () => {

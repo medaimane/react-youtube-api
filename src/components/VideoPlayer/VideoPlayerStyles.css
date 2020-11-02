@@ -1,7 +1,7 @@
 .player-wrapper {
-    margin-top: 10vmin;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
     position: relative;
-    /*height: 500px;*/
     height: 40vmin;
     justify-content: center;
     align-items: center;

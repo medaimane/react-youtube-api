@@ -1,24 +1,23 @@
 import React, {FC} from "react";
 import Player from "react-player";
 import ReactPlayer from "react-player";
+import {buildYoutubeVideoURL} from "../../services/networking/buildEndpointURL";
 
 import './VideoPlayerStyles.css';
 
-const BaseURL = 'https://www.youtube.com';
-
-const videoSize = {
+export const videoSize = {
     width: '100%',
     height: '100%',
 }
 
 interface Props {
-    id: string;
+    videoId: string;
     isPlaying: boolean;
     onVideoReady?: (player: ReactPlayer) => void;
 }
 
 export const VideoPlayer: FC<Props> = props => {
-    const url = `${BaseURL}/watch?v=${props.id}`;
+    const url = buildYoutubeVideoURL(props.videoId);
 
     const onVideoReady = (player: ReactPlayer) => {
         props.onVideoReady?.(player);
