@@ -7,11 +7,9 @@ import {Video} from "../services/api/models/Video";
 import {videosDataStub} from "./testsStubs/videosJSONStub";
 import {APIError} from "../services/api/APIError";
 
-jest.mock('process', () => ({
-    env: {
-        REACT_APP_YOUTUBE_DATA_API_KEY: 'SOME_YOUTUBE_API_KEY',
-    }
-}));
+const mockYoutubeDataAPIKey = () => {
+    process.env.REACT_APP_YOUTUBE_DATA_API_KEY = 'SOME_YOUTUBE_API_KEY';
+}
 
 describe('VideosServiceImpl', () => {
     let sut: VideosGateway;
@@ -30,6 +28,10 @@ describe('VideosServiceImpl', () => {
 
     describe('getVideos', () => {
         const searchString = 'any search';
+
+        beforeEach(() => {
+            mockYoutubeDataAPIKey();
+        })
 
         it('sends request to correct url', () => {
             sut.searchVideos(searchString);

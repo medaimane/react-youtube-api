@@ -72,7 +72,7 @@ export class VideoPlayerPresenter extends Presenter<VideoPlayerOutput> {
 
         this.videosService
             .searchVideos(searchString)
-            .pipe(debounceTime(1000))
+            .pipe(debounceTime(3000))
             .subscribe(this.getVideoSuccess, this.processError);
     }
 

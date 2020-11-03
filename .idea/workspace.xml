@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7217b26a-b954-4676-953c-0157d3cc2d8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/VideosServiceImpl.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/VideosServiceImpl.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/VideoPlayer/VideoPlayerPresenter.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +118,9 @@
       <workItem from="1604158747861" duration="14783000" />
       <workItem from="1604185053272" duration="36524000" />
       <workItem from="1604310629059" duration="693000" />
-      <workItem from="1604328503500" duration="4206000" />
+      <workItem from="1604328503500" duration="5086000" />
+      <workItem from="1604348298660" duration="85000" />
+      <workItem from="1604407473992" duration="984000" />
     </task>
     <servers />
   </component>
@@ -159,22 +161,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1604311178763" />
-    <state width="1659" height="295" key="GridCell.Tab.0.bottom" timestamp="1604330344651">
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom" timestamp="1604431139965">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1604330344651" />
-    <state width="1659" height="295" key="GridCell.Tab.0.center" timestamp="1604330344649">
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1604336199425" />
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604431139965" />
+    <state width="1659" height="295" key="GridCell.Tab.0.center" timestamp="1604431139963">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1604330344649" />
-    <state width="1659" height="295" key="GridCell.Tab.0.left" timestamp="1604330344648">
+    <state width="1659" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1604336199421" />
+    <state width="1659" height="295" key="GridCell.Tab.0.center/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604431139963" />
+    <state width="1659" height="295" key="GridCell.Tab.0.left" timestamp="1604431139962">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1604330344648" />
-    <state width="1659" height="295" key="GridCell.Tab.0.right" timestamp="1604330344650">
+    <state width="1659" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1604336199420" />
+    <state width="1659" height="295" key="GridCell.Tab.0.left/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604431139962" />
+    <state width="1659" height="295" key="GridCell.Tab.0.right" timestamp="1604431139964">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1604330344650" />
+    <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1604336199422" />
+    <state width="1659" height="295" key="GridCell.Tab.0.right/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1604431139964" />
     <state x="691" y="441" key="VCS.ChangelistChooser" timestamp="1604311129941">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
